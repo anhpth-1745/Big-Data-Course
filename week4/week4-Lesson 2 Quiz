@@ -1,0 +1,80 @@
+Question 1
+What is a job?
+
+An activity spawned in the response to a Spark action. - OK
+
+
+Question 2    - OK
+What is a task?
+
+ A unit of work performed by the executor.
+
+Question 3
+What is a job stage?
+
+ A single step of the job.
+
+Question 4 - OK
+How does your application find out the executors to work with?
+
+The SparkContext object allocates the executors by communicating with the cluster manager.
+
+
+Question 5 - OK
+Mark all the statements that are true.
+
+Data can be cached both on the disk and in the memory.
+You can ask Spark to make several copies of your persistent dataset.
+Spark can be hinted to keep particular datasets in the memory.
+
+Question 6 - OK
+Imagine that you need to deliver three floating-point parameters for a machine learning algorithm used in your tasks. What is the best way to do it?
+
+Capture them into the closure to be sent during the task scheduling.
+
+Question 7 - OK
+Imagine that you need to somehow print corrupted records from the log file to the screen. How can you do that?
+
+Use an action to collect filtered records in the driver.
+
+
+
+Question 8 - OK
+How broadcast variables are distributed among the executors?
+
+The executors distribute the content with a peer-to-peer, torrent-like protocol, and the driver seeds the content.
+
+Question 9 - OK
+What will happen if you use a non-associative, non-commutative operator in the accumulator variables?
+
+
+Question 10
+Mark all the operators that are both associative and commutative.
+
+
+Operation semantics are ill-defined in this case.
+
+prod(x, y) = x * y	
+sum(x, y) = x + y
+min(x, y) = if x > y then y else x end
+max(x, y) = if x > y then x else y end
+
+
+Question 11
+Does Spark guarantee that accumulator updates originating from actions are applied only once?
+
+
+YES
+
+
+
+
+Question 12
+Does Spark guarantee that accumulator updates originating from transformations are applied at least once?
+
+No
+
+
+
+
+
